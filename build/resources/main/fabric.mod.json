@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "fdp",
+  "version": "1.0-SNAPSHOT",
+  "name": "Fabric Default Project",
+  "description": "A default project used by JTechGaming for all their mods",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/fdp/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.jtech.fdp.client.FabricDefaultProjectClient"
+    ],
+    "main": [
+      "me.jtech.fdp.FabricDefaultProject"
+    ],
+    "modmenu": [
+      "me.jtech.fdp.client.Implementations.FDPModMenuApiImpl"
+    ]
+  },
+  "mixins": [
+    "fdp.mixins.json",
+    {
+      "config": "fdp.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "fabric": "*",
+    "minecraft": "1.21"
+  }
+}
